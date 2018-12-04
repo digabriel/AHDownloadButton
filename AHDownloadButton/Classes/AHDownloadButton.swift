@@ -12,7 +12,7 @@ public protocol AHDownloadButtonDelegate: class {
     func didTapDownloadButton(withState state: AHDownloadButton.State)
 }
 
-public class AHDownloadButton: UIView {
+open class AHDownloadButton: UIView {
     
     public enum State {
         case startDownload
@@ -426,7 +426,7 @@ public class AHDownloadButton: UIView {
     
     // MARK: Method overrides
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         let width = min(frame.width, frame.height)
         pendingViewWidthConstraint.constant = width
